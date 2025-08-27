@@ -98,6 +98,7 @@ header {
 
 .about-img img {
   width: 100%;
+  max-width: 650px;
   border-radius: 10px;
 }
 
@@ -147,6 +148,7 @@ header {
 
 .product img {
   width: 100%;
+  max-width: 380px
   border-radius: 10px;
   margin-bottom: 15px;
 }
