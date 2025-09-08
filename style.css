@@ -15,7 +15,8 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh; /* instead of fixed height */
+  height: auto;      /* allow it to grow */
 }
 
 .overlay {
