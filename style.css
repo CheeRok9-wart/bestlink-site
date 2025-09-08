@@ -50,9 +50,9 @@ header {
 }
 
 .hero-text {
-  text-align: left;       /* text aligned left */
-  margin: 0 auto 0 60px;  /* push it away from the left edge */
-  max-width: 800px;       /* keep text from stretching too far */
+  text-align: left;
+  margin: 120px auto 80px 60px; /* top | right | bottom | left */
+  max-width: 800px;
 }
 
 .hero-text h1 {
