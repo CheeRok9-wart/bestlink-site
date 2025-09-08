@@ -31,6 +31,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 80px; /* ⬅ add space below header */
 }
 
 .logo {
