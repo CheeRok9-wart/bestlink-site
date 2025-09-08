@@ -165,9 +165,10 @@ footer {
 }
 
 .footer-overlay {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5); /* reduce opacity */
   padding: 60px 20px;
 }
+
 
 .footer-content {
   display: flex;
