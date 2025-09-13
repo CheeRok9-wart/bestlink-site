@@ -25,7 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 80px; /* ⬅ pushes hero-text further down */
+  gap: 20px; /* ⬅ pushes hero-text further down */
 }
 
 header {
