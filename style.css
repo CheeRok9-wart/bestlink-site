@@ -54,7 +54,7 @@ header {
 
 .hero-text {
   text-align: left;
-  margin: 0 20px 180px 60px; /* ⬅ bigger bottom margin */
+  margin: 0 20px 180px 100px; /* ⬅ bigger bottom margin */
   max-width: 800px;
 }
 
