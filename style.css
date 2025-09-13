@@ -20,12 +20,9 @@ body {
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.6);
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 20px; /* ⬅ pushes hero-text further down */
 }
 
 header {
@@ -54,6 +51,7 @@ header {
 
 .hero-text {
   text-align: left;
+  margin-top: 120px;
   margin: 0 20px 180px 100px; /* ⬅ bigger bottom margin */
   max-width: 800px;
 }
