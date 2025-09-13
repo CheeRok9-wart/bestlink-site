@@ -15,56 +15,43 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;  /* makes hero take full viewport height */
-  height: auto;       /* allows growth if content overflows */
+  min-height: 100vh;               /* hero fills viewport */
+  height: auto;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.6); /* dark overlay on background */
-  height: 100%;                   /* covers full hero section */
+  background: rgba(0, 0, 0, 0.6);  /* dark overlay */
+  height: 100%;
   display: flex;
-  flex-direction: column;          /* stack header above hero-text */
-  justify-content: flex-start;     /* align content to the top */
+  flex-direction: column;          /* header above hero-text */
+  justify-content: flex-start;     /* align items from top */
 }
 
 header {
   padding: 20px;                   /* spacing inside header */
   display: flex;
-  justify-content: flex-start;     /* keep logo to the left */
-  align-items: center;             /* vertically center logo image + text */
-  margin-bottom: 0;                /* reset bottom margin, handled by hero-text */
+  justify-content: flex-start;     /* logo left aligned */
+  align-items: center;             /* center logo vertically */
+  margin-bottom: 0;                /* prevent double spacing */
 }
 
 .hero-text {
-  text-align: left;                /* align text left */
-  margin: 120px 20px 0 100px;      /* top pushes text down, sides = page spacing */
-  max-width: 800px;                /* keeps text from stretching too wide */
+  text-align: left;                /* left align text */
+  margin: 0 20px 0 100px;          /* only side margins, no bottom push */
+  max-width: 800px;
+  margin-top: 120px;               /* pushes text down below header */
 }
 
 .hero-text h1 {
-  font-size: 4.5rem;               /* large heading */
-  margin-bottom: 20px;             /* space below heading */
+  font-size: 4.5rem;
+  margin-bottom: 20px;
 }
 
 .hero-text p {
-  margin-bottom: 30px;             /* space below paragraph */
-  font-size: 2rem;                 /* larger subtitle text */
+  margin-bottom: 30px;
+  font-size: 2rem;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #ff9800;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #e68900;
-}
 
 /* About + Products */
 .about-products {
