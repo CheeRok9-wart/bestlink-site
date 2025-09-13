@@ -38,7 +38,7 @@ header {
 
 .hero-text {
   text-align: left;                /* align text left */
-  margin: 120px 20px 0 100px;      /* top pushes text down, sides = page spacing */
+  margin: 10px 20px 0 100px;      /* top pushes text down, sides = page spacing */
   max-width: 800px;                /* keeps text from stretching too wide */
 }
 
