@@ -15,46 +15,31 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh; /* instead of fixed height */
-  height: auto;      /* allow it to grow */
+  min-height: 100vh;               /* hero fills viewport */
+  height: auto;
 }
 
 .overlay {
+  background: rgba(0, 0, 0, 0.6);  /* dark overlay */
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: column;          /* header above hero-text */
+  justify-content: flex-start;     /* align items from top */
 }
 
 header {
-  padding: 20px;
+  padding: 20px;                   /* spacing inside header */
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 80px; /* ⬅ add space below header */
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 50px;
-  margin-right: 10px;
-}
-
-.logo span {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ff9800;
+  justify-content: flex-start;     /* logo left aligned */
+  align-items: center;             /* center logo vertically */
+  margin-bottom: 0;                /* prevent double spacing */
 }
 
 .hero-text {
-  text-align: left;
-  margin-top: 120px;
-  margin-top: 10px;
-  margin: 0 20px 180px 100px; /* ⬅ bigger bottom margin */
+  text-align: left;                /* left align text */
+  margin: 0 20px 0 100px;          /* only side margins, no bottom push */
   max-width: 800px;
+  margin-top: 120px;               /* pushes text down below header */
 }
 
 .hero-text h1 {
