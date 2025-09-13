@@ -13,57 +13,43 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh; /* instead of fixed height */
-  height: auto;      /* allow it to grow */
+  min-height: 100vh;  /* makes hero take full viewport height */
+  height: auto;       /* allows growth if content overflows */
 }
 
 .overlay {
+  background: rgba(0, 0, 0, 0.6); /* dark overlay on background */
+  height: 100%;                   /* covers full hero section */
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: column;          /* stack header above hero-text */
+  justify-content: flex-start;     /* align content to the top */
 }
 
 header {
-  padding: 20px;
+  padding: 20px;                   /* spacing inside header */
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 80px; /* ⬅ add space below header */
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 50px;
-  margin-right: 10px;
-}
-
-.logo span {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ff9800;
+  justify-content: flex-start;     /* keep logo to the left */
+  align-items: center;             /* vertically center logo image + text */
+  margin-bottom: 0;                /* reset bottom margin, handled by hero-text */
 }
 
 .hero-text {
-  text-align: left;
-  margin-top: 10px;
-  margin: 0 20px 180px 100px; /* ⬅ bigger bottom margin */
-  max-width: 800px;
+  text-align: left;                /* align text left */
+  margin: 120px 20px 0 100px;      /* top pushes text down, sides = page spacing */
+  max-width: 800px;                /* keeps text from stretching too wide */
 }
 
 .hero-text h1 {
-  font-size: 4.5rem;
-  margin-bottom: 20px;
+  font-size: 4.5rem;               /* large heading */
+  margin-bottom: 20px;             /* space below heading */
 }
 
 .hero-text p {
-  margin-bottom: 30px;
-  font-size: 2rem;
+  margin-bottom: 30px;             /* space below paragraph */
+  font-size: 2rem;                 /* larger subtitle text */
 }
 
 .btn {
