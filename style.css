@@ -15,31 +15,47 @@ body {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;               /* hero fills viewport */
-  height: auto;
+  min-height: 100vh; /* instead of fixed height */
+  height: auto;      /* allow it to grow */
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.6);  /* dark overlay */
+  background: rgba(0, 0, 0, 0.6);
   height: 100%;
   display: flex;
-  flex-direction: column;          /* header above hero-text */
-  justify-content: flex-start;     /* align items from top */
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 120px; /* ⬅ pushes hero-text further down */
 }
 
 header {
-  padding: 20px;                   /* spacing inside header */
+  padding: 20px;
   display: flex;
-  justify-content: flex-start;     /* logo left aligned */
-  align-items: center;             /* center logo vertically */
-  margin-bottom: 0;                /* prevent double spacing */
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 80px; /* ⬅ add space below header */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff9800;
 }
 
 .hero-text {
-  text-align: left;                /* left align text */
-  margin: 0 20px 0 100px;          /* only side margins, no bottom push */
+  text-align: left;
+  margin: 0 20px 180px 100px; /* ⬅ bigger bottom margin */
   max-width: 800px;
-  margin-top: 120px;               /* pushes text down below header */
 }
 
 .hero-text h1 {
@@ -209,3 +225,4 @@ footer {
   .product-grid {
     grid-template-columns: 1fr;
   }
+}
