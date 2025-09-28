@@ -314,7 +314,11 @@ footer {
   background: #ff9800;
   color: #fff;
 }
-
+.finance-partner {
+  max-width: 250px;  /* adjust size */
+  margin: 20px auto; /* center with spacing */
+  display: block;
+}
 
 .finance-details, .finance-contact {
   padding: 60px 20px;
