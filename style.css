@@ -300,13 +300,13 @@ footer {
 }
 
 .finance-image-block img {
-  max-width: 180px;     /* was 300px, scale down */
+  max-width: 260px;     /* was 300px, scale down */
   width: 100%;
   height: auto;
 }
 @media (max-width: 600px) {
   .finance-image-block img {
-    max-width: 140px; /* smaller on mobile */
+    max-width: 200px; /* smaller on mobile */
   }
 }
 
@@ -379,13 +379,37 @@ footer {
   display: block;
 }
 
-.finance-details, .finance-contact {
+/* Common box styling */
+.finance-details, 
+.finance-contact {
+  position: relative;         /* allows overlay layering */
   padding: 60px 20px;
-  background: #444;
   margin: 40px auto;
   max-width: 900px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.95); /* semi-white background */
+  color: #222;                /* switch text to dark */
+  z-index: 1;                 /* keep content above background */
+}
+
+/* Assign background images to each section */
+.finance-details:nth-of-type(1) {
+  background-image: url("images/finance-partner-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.finance-details:nth-of-type(2) {
+  background-image: url("images/finance-botany-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.finance-contact {
+  background-image: url("images/finance-contact-bg.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .finance-details h2, .finance-contact h2 {
