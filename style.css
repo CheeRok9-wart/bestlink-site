@@ -279,6 +279,12 @@ footer {
 .modal-gallery img:hover {
   transform: scale(1.05);
 }
+/* White background just for the finance page */
+.finance-page {
+  background-color: #fff;
+  color: #222; /* dark text for readability */
+}
+
 .finance-hero {
   position: relative;
   min-height: 70vh;
