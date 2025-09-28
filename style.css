@@ -360,7 +360,13 @@ footer {
   justify-content: flex-start; /* keep logo on the left */
 }
 .finance-hero .hero-text {
-  color: #222; /* dark text for readability */
+  flex: 1;
+  display: flex;
+  align-items: center;       /* vertical center */
+  justify-content: center;   /* horizontal center */
+  text-align: center;
+  margin: 0 auto;            /* ensures it centers across full width */
+  width: 100%;               /* let it take full width */
 }
 
 .finance-hero .btn {
