@@ -289,18 +289,23 @@ footer {
 
 .finance-content {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: row;     /* keep image + text side by side */
+  align-items: center;     /* vertical center */
   gap: 30px;
+  margin: 40px auto;
+  max-width: 1000px;       /* keep things tidy */
 }
 
 .finance-text {
+  order: 2;                /* text second */
   flex: 1 1 60%;
   font-size: 1.2rem;      /* larger text */
   font-weight: 600;       /* bold */
+  text-align: left;        /* keep text aligned left */
 }
 
 .finance-image {
+  order: 1;                /* image first */
   flex: 1 1 40%;       /* take up natural space */
   text-align: center;  /* center the image */
   background: none;    /* remove any container look */
@@ -308,6 +313,10 @@ footer {
   padding: 0;          /* remove padding */
   border: none;       /* no border */
 }
+.finance-text {
+    order: 2;
+    text-align: center;
+  }
 
 /* Finance Page Images */
 .finance-image img {
@@ -322,8 +331,10 @@ footer {
 @media (max-width: 768px) {
   .finance-content {
     flex-direction: column;
+    text-align: center;
   }
   .finance-image {
+    order: 1;
     margin-top: 20px;
   }
 }
