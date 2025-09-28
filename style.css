@@ -298,10 +298,14 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flext start;
   padding: 20px;
 }
-
+.finance-overlay header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* keep logo on the left */
+}
 .finance-hero .hero-text {
   color: #222; /* dark text for readability */
 }
