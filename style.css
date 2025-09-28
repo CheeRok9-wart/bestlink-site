@@ -279,11 +279,12 @@ footer {
 .modal-gallery img:hover {
   transform: scale(1.05);
 }
-/* White background just for the finance page */
+/* Finance Page Styles */
 .finance-page {
   background-color: #fff;
-  color: #222; /* dark text for readability */
+  color: #222;
 }
+
 .finance-content {
   display: flex;
   flex-wrap: wrap;
@@ -307,18 +308,18 @@ footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* On smaller screens, stack them */
+/* Stack on smaller screens */
 @media (max-width: 768px) {
   .finance-content {
     flex-direction: column;
     text-align: center;
   }
-
   .finance-image {
     margin-top: 20px;
   }
 }
 
+/* Hero Section */
 .finance-hero {
   position: relative;
   min-height: 50vh;
@@ -327,51 +328,39 @@ footer {
   justify-content: center;
   text-align: center;
 }
-.finance-image-block {
-  text-align: center;
-  padding: 20px 10px;   /* reduce vertical padding */
-  background: #fff;     /* stays white to match page */
-}
-
-.finance-image-block img {
-  max-width: 260px;     /* was 300px, scale down */
-  width: 100%;
-  height: auto;
-}
-@media (max-width: 600px) {
-  .finance-image-block img {
-    max-width: 200px; /* smaller on mobile */
-  }
-}
 
 .finance-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(255, 255, 255, 0.55);
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
 
-/* keep logo pinned top-left */
 .finance-overlay header {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 0; /* remove extra spacing */
+  margin-bottom: 0;
 }
 
-/* center hero text vertically and horizontally */
+.finance-overlay .logo img {
+  height: 35px;
+}
+.finance-overlay .logo span {
+  font-size: 1.2rem;
+}
+
 .finance-hero .hero-text {
   flex: 1;
   display: flex;
   align-items: center;      /* vertical center */
   justify-content: center;  /* horizontal center */
   text-align: center;
-  margin: 0;                /* override global margins */
+  margin: 0 auto;           /* center across full width */
+  width: 100%;
   color: #222;
 }
 
@@ -380,83 +369,68 @@ footer {
   margin: 0;
 }
 
-.finance-overlay .logo img {
-  height: 35px;   /* smaller than the current 50px */
-}
-
-.finance-overlay .logo span {
-  font-size: 1.2rem; /* shrink text beside logo */
-}
-
-.finance-overlay header {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start; /* keep logo on the left */
-}
-.finance-hero .hero-text {
-  flex: 1;
-  display: flex;
-  align-items: center;       /* vertical center */
-  justify-content: center;   /* horizontal center */
-  text-align: center;
-  margin: 0 auto;            /* ensures it centers across full width */
-  width: 100%;               /* let it take full width */
-}
-
 .finance-hero .btn {
   background: #ff9800;
   color: #fff;
 }
+
+/* Trusted-lock section */
+.finance-image-block {
+  text-align: center;
+  padding: 20px 10px;
+  background: #fff;
+}
+
+.finance-image-block img {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .finance-image-block img {
+    max-width: 200px;
+  }
+}
+
 .finance-partner {
-  max-width: 250px;  /* adjust size */
-  margin: 20px auto; /* center with spacing */
+  max-width: 250px;
+  margin: 20px auto;
   display: block;
 }
 
-/* Common box styling */
-.finance-details, 
+/* Finance details & contact sections */
+.finance-details,
 .finance-contact {
-  position: relative;         /* allows overlay layering */
+  position: relative;
   padding: 60px 20px;
   margin: 40px auto;
   max-width: 900px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  background: rgba(255,255,255,0.95); /* semi-white background */
-  color: #222;                /* switch text to dark */
-  z-index: 1;                 /* keep content above background */
+  background: rgba(255,255,255,0.95);
+  color: #222;
+  z-index: 1;
 }
 
-/* Assign background images to each section */
+.finance-details:nth-of-type(1),
+.finance-details:nth-of-type(2),
+.finance-contact {
+  background-size: cover;
+  background-position: center;
+}
+
 .finance-details:nth-of-type(1) {
   background-image: url("images/MTFLogo.png");
-  background-size: cover;
-  background-position: center;
 }
-
 .finance-details:nth-of-type(2) {
   background-image: url("images/MTFTeam.jpg");
-  background-size: cover;
-  background-position: center;
 }
-
 .finance-contact {
   background-image: url("images/MTFTeam2.jpg");
-  background-size: cover;
-  background-position: center;
-}
-/* White inner box for readability */
-.finance-box,
-.finance-contact .contact-box {
-  background: rgba(255,255,255,0.95);
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  max-width: 800px;
-  margin: 0 auto;
 }
 
-.finance-details h2, .finance-contact h2 {
+.finance-details h2,
+.finance-contact h2 {
   color: #ff9800;
   margin-bottom: 20px;
 }
