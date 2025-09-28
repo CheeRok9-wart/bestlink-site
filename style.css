@@ -401,13 +401,13 @@ footer {
 }
 
 .finance-details:nth-of-type(2) {
-  background-image: url("images/MTFTeam.png");
+  background-image: url("images/MTFTeam.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .finance-contact {
-  background-image: url("MTFTeam2.png");
+  background-image: url("MTFTeam2.jpg");
   background-size: cover;
   background-position: center;
 }
