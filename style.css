@@ -284,6 +284,40 @@ footer {
   background-color: #fff;
   color: #222; /* dark text for readability */
 }
+.finance-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.finance-text {
+  flex: 1 1 60%;
+}
+
+.finance-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.finance-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* On smaller screens, stack them */
+@media (max-width: 768px) {
+  .finance-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .finance-image {
+    margin-top: 20px;
+  }
+}
 
 .finance-hero {
   position: relative;
