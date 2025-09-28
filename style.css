@@ -316,13 +316,28 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.55); /* white overlay */
+  background: rgba(255, 255, 255, 0.55);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flext start;
+  justify-content: space-between; /* space between logo & text */
   padding: 20px;
 }
+
+.finance-overlay header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.finance-hero .hero-text {
+  flex: 1;                   /* take remaining space */
+  display: flex;
+  align-items: center;        /* vertical center */
+  justify-content: center;    /* horizontal center */
+  text-align: center;         /* keep heading centered */
+  color: #222;
+}
+
 .finance-overlay .logo img {
   height: 35px;   /* smaller than the current 50px */
 }
