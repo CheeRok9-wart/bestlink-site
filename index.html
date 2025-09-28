@@ -85,7 +85,7 @@
       </div>
     </div>
   </footer>
-  <!-- Modal Popup -->
+<!-- Modal Popup -->
 <div id="pergolaModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -100,7 +100,8 @@
     </div>
   </div>
 </div>
-  <!-- Car Ports Modal -->
+
+<!-- Car Ports Modal -->
 <div id="carportModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -113,6 +114,7 @@
     </div>
   </div>
 </div>
+
 <!-- Sun Rooms Modal -->
 <div id="sunroomModal" class="modal">
   <div class="modal-content">
@@ -124,61 +126,64 @@
     </div>
   </div>
 </div>
-<script>
-  // Get modal and button
-  const pergolaModal = document.getElementById("pergolaModal");
-  const pergolaBtn = document.querySelector(".product:nth-child(1) .btn");
-  const closeBtn = document.querySelector(".modal .close");
 
+<!-- SINGLE script block: use this and remove any other script blocks for the modals -->
 <script>
-  // Modal setup
+  // collect modals
   const modals = {
     pergola: document.getElementById("pergolaModal"),
     carport: document.getElementById("carportModal"),
     sunroom: document.getElementById("sunroomModal")
   };
 
+  // collect buttons (scoped to product-grid to be safer)
   const buttons = {
-    pergola: document.querySelector(".product:nth-child(1) .btn"),
-    carport: document.querySelector(".product:nth-child(2) .btn"),
-    sunroom: document.querySelector(".product:nth-child(3) .btn")
+    pergola: document.querySelector(".product-grid .product:nth-child(1) .btn"),
+    carport: document.querySelector(".product-grid .product:nth-child(2) .btn"),
+    sunroom: document.querySelector(".product-grid .product:nth-child(3) .btn")
   };
 
-  const closeButtons = document.querySelectorAll(".modal .close");
-
-  // Open modal
-  buttons.pergola.addEventListener("click", (e) => {
-    e.preventDefault();
-    modals.pergola.style.display = "block";
-  });
-
-  buttons.carport.addEventListener("click", (e) => {
-    e.preventDefault();
-    modals.carport.style.display = "block";
-  });
-
-  buttons.sunroom.addEventListener("click", (e) => {
-    e.preventDefault();
-    modals.sunroom.style.display = "block";
-  });
-
-  // Close modal when clicking X
-  closeButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      btn.closest(".modal").style.display = "none";
+  // attach open handlers (guard if button or modal missing)
+  Object.keys(buttons).forEach(key => {
+    const btn = buttons[key];
+    const modal = modals[key];
+    if (!btn || !modal) return;
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.style.display = "block";
+      // prevent background scrolling when modal open
+      document.body.style.overflow = "hidden";
     });
   });
 
-  // Close modal when clicking outside
-  window.addEventListener("click", (e) => {
-    Object.values(modals).forEach((modal) => {
-      if (e.target === modal) {
+  // close buttons (the × inside each modal)
+  document.querySelectorAll(".modal .close").forEach(closeBtn => {
+    closeBtn.addEventListener("click", () => {
+      const modal = closeBtn.closest(".modal");
+      if (modal) {
         modal.style.display = "none";
+        document.body.style.overflow = "";
       }
     });
   });
+
+  // click outside modal content to close
+  window.addEventListener("click", (e) => {
+    if (e.target && e.target.classList && e.target.classList.contains('modal')) {
+      e.target.style.display = "none";
+      document.body.style.overflow = "";
+    }
+  });
+
+  // close on ESC
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      Object.values(modals).forEach(m => {
+        if (m) m.style.display = "none";
+      });
+      document.body.style.overflow = "";
+    }
+  });
 </script>
-
-
 </body>
 </html>
