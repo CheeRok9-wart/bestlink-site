@@ -306,6 +306,7 @@ footer {
   background: none;    /* remove any container look */
   box-shadow: none;    /* remove shadow if any */
   padding: 0;          /* remove padding */
+  border: none;       /* no border */
 }
 
 /* Finance Page Images */
@@ -314,7 +315,7 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 8px;  /* softer corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* subtle shadow */
+  box-shadow: none;   /* remove outline/shadow */
 }
 
 /* Stack on smaller screens */
@@ -400,10 +401,10 @@ footer {
 }
 @media (max-width: 600px) {
   .finance-image img {
-    max-width: 200px;  /* shrink more on small screens */
+    max-width: 340px;  /* shrink more on small screens */
   }
   .finance-image-block img {
-    max-width: 240px;  /* still larger than before on mobile */
+    max-width: 300px;  /* still larger than before on mobile */
   }
 }
 
