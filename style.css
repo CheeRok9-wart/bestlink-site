@@ -319,23 +319,31 @@ footer {
   background: rgba(255, 255, 255, 0.55);
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* space between logo & text */
   padding: 20px;
 }
 
+/* keep logo pinned top-left */
 .finance-overlay header {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 0; /* remove extra spacing */
 }
 
+/* center hero text vertically and horizontally */
 .finance-hero .hero-text {
-  flex: 1;                   /* take remaining space */
+  flex: 1;
   display: flex;
-  align-items: center;        /* vertical center */
-  justify-content: center;    /* horizontal center */
-  text-align: center;         /* keep heading centered */
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+  text-align: center;
+  margin: 0;                /* override global margins */
   color: #222;
+}
+
+.finance-hero .hero-text h1 {
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 .finance-overlay .logo img {
@@ -372,11 +380,6 @@ footer {
   max-width: 900px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
-
-.finance-hero .hero-text h1 {
-  font-size: 2.5rem;  /* was 4.5rem, shrink down */
-  margin-bottom: 15px;
 }
 
 .finance-details h2, .finance-contact h2 {
