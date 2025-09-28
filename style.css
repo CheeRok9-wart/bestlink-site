@@ -321,7 +321,11 @@ footer {
     text-align: center;
   }
   .finance-image {
-    margin-top: 20px;
+    flex: 1 1 40%;       /* take up natural space */
+    text-align: center;  /* center the image */
+    background: none;    /* remove any container look */
+    box-shadow: none;    /* remove shadow if any */
+    padding: 0; 
   }
 }
 
@@ -398,10 +402,16 @@ footer {
 }
 @media (max-width: 600px) {
   .finance-image img {
-    max-width: 200px;  /* shrink more on small screens */
-  }
+  max-width: 380px;    /* larger size */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;  /* softer corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* subtle shadow */
+}
   .finance-image-block img {
     max-width: 240px;  /* still larger than before on mobile */
+    width: 100%;
+    height: auto;
   }
 }
 
