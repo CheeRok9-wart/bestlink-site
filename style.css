@@ -280,3 +280,36 @@ footer {
   transform: scale(1.05);
 }
 
+.finance-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.finance-details, .finance-contact {
+  padding: 60px 20px;
+  background: #444;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.finance-details h2, .finance-contact h2 {
+  color: #ff9800;
+  margin-bottom: 20px;
+}
+
+.finance-details ul {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.finance-footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #aaa;
+}
