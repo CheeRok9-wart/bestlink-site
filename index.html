@@ -95,6 +95,30 @@
     </div>
   </div>
 </div>
+<script>
+  // Get modal and button
+  const pergolaModal = document.getElementById("pergolaModal");
+  const pergolaBtn = document.querySelector(".product:nth-child(1) .btn");
+  const closeBtn = document.querySelector(".modal .close");
+
+  // Open modal
+  pergolaBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    pergolaModal.style.display = "block";
+  });
+
+  // Close modal
+  closeBtn.addEventListener("click", () => {
+    pergolaModal.style.display = "none";
+  });
+
+  // Close when clicking outside modal
+  window.addEventListener("click", (e) => {
+    if (e.target === pergolaModal) {
+      pergolaModal.style.display = "none";
+    }
+  });
+</script>
 
 </body>
 </html>
