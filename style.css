@@ -7,12 +7,318 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #fff; /* white for finance page */
-  color: #222;
+  background-color: #333;
+  color: #fff;
   line-height: 1.6;
 }
 
 /* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh; /* instead of fixed height */
+  height: auto;      /* allow it to grow */
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 120px; /* ⬅ pushes hero-text further down */
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 80px; /* ⬅ add space below header */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff9800;
+}
+
+.hero-text {
+  text-align: left;
+  margin: 0 20px 180px 100px; /* ⬅ bigger bottom margin */
+  max-width: 800px;
+}
+
+.hero-text h1 {
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff9800;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e68900;
+}
+
+/* About + Products */
+.about-products {
+  padding: 60px 20px;
+}
+
+.about-products-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.about-img {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 10px;
+}
+
+.about-text {
+  flex: 2;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.about-text h2 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.about-text h3 {
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: #2ba81d;
+}
+
+/* Products Section */
+.products {
+  text-align: center;
+}
+
+.products h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.product {
+  background: #444;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 320px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 420px;
+}
+
+.product img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  color: #fff;
+}
+
+.footer-overlay {
+  background: rgba(0, 0, 0, 0.5); /* reduce opacity */
+  padding: 60px 20px;
+}
+
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.footer-logo span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ff9800;
+}
+
+.footer-info {
+  max-width: 400px;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-products-top {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Modal Styles */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: #222;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1000px;
+  color: #fff;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ff9800;
+}
+
+.close {
+  color: #fff;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.modal-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.modal-gallery img:hover {
+  transform: scale(1.05);
+}
+/* White background just for the finance page */
+.finance-page {
+  background-color: #fff;
+  color: #222; /* dark text for readability */
+}
+.finance-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.finance-text {
+  flex: 1 1 60%;
+}
+
+.finance-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.finance-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* On smaller screens, stack them */
+@media (max-width: 768px) {
+  .finance-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .finance-image {
+    margin-top: 20px;
+  }
+}
+
 .finance-hero {
   position: relative;
   min-height: 50vh;
@@ -20,7 +326,22 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('images/image1.jpg') no-repeat center center/cover;
+}
+.finance-image-block {
+  text-align: center;
+  padding: 20px 10px;   /* reduce vertical padding */
+  background: #fff;     /* stays white to match page */
+}
+
+.finance-image-block img {
+  max-width: 260px;     /* was 300px, scale down */
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .finance-image-block img {
+    max-width: 200px; /* smaller on mobile */
+  }
 }
 
 .finance-overlay {
@@ -35,36 +356,22 @@ body {
   padding: 20px;
 }
 
+/* keep logo pinned top-left */
 .finance-overlay header {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 0; /* remove extra spacing */
 }
 
-.finance-overlay .logo {
-  display: flex;
-  align-items: center;
-}
-
-.finance-overlay .logo img {
-  height: 35px;
-  margin-right: 10px;
-}
-
-.finance-overlay .logo span {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #ff9800;
-}
-
+/* center hero text vertically and horizontally */
 .finance-hero .hero-text {
   flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
   text-align: center;
-  margin: 0 auto;
-  width: 100%;
+  margin: 0;                /* override global margins */
   color: #222;
 }
 
@@ -73,91 +380,92 @@ body {
   margin: 0;
 }
 
+.finance-overlay .logo img {
+  height: 35px;   /* smaller than the current 50px */
+}
+
+.finance-overlay .logo span {
+  font-size: 1.2rem; /* shrink text beside logo */
+}
+
+.finance-overlay header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* keep logo on the left */
+}
+.finance-hero .hero-text {
+  flex: 1;
+  display: flex;
+  align-items: center;       /* vertical center */
+  justify-content: center;   /* horizontal center */
+  text-align: center;
+  margin: 0 auto;            /* ensures it centers across full width */
+  width: 100%;               /* let it take full width */
+}
+
 .finance-hero .btn {
   background: #ff9800;
   color: #fff;
 }
-
-/* Trusted Partner Image */
-.finance-image-block {
-  text-align: center;
-  padding: 20px 10px;
+.finance-partner {
+  max-width: 250px;  /* adjust size */
+  margin: 20px auto; /* center with spacing */
+  display: block;
 }
 
-.finance-image-block img {
-  max-width: 260px;
-  width: 100%;
-  height: auto;
-}
-
-@media (max-width: 600px) {
-  .finance-image-block img {
-    max-width: 200px;
-  }
-}
-
-/* Section Layout (Image + Text) */
-.finance-section {
+/* Common box styling */
+.finance-details, 
+.finance-contact {
+  position: relative;         /* allows overlay layering */
   padding: 60px 20px;
-  max-width: 1100px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.95); /* semi-white background */
+  color: #222;                /* switch text to dark */
+  z-index: 1;                 /* keep content above background */
+}
+
+/* Assign background images to each section */
+.finance-details:nth-of-type(1) {
+  background-image: url("images/MTFLogo.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.finance-details:nth-of-type(2) {
+  background-image: url("images/MTFTeam.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.finance-contact {
+  background-image: url("images/MTFTeam2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+/* White inner box for readability */
+.finance-box,
+.finance-contact .contact-box {
+  background: rgba(255,255,255,0.95);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  max-width: 800px;
   margin: 0 auto;
 }
 
-.finance-content {
-  display: flex;
-  flex-direction: row;   /* force side-by-side */
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.finance-image {
-  flex: 0 0 auto;        /* don't let it stretch */
-  max-width: 320px;      /* keep image smaller */
-}
-
-.finance-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.finance-text {
-  flex: 1;
-  color: #222;
-}
-
-.finance-text h2 {
+.finance-details h2, .finance-contact h2 {
   color: #ff9800;
   margin-bottom: 20px;
 }
 
-.finance-text ul {
+.finance-details ul {
   margin: 20px 0;
   padding-left: 20px;
 }
 
-/* Stack vertically on small screens */
-@media (max-width: 768px) {
-  .finance-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .finance-image {
-    max-width: 80%;   /* allow bigger image on mobile */
-    margin-bottom: 20px;
-  }
-}
-
-
-  .finance-text {
-    text-align: center;
-  }
-}
-
-/* Footer */
 .finance-footer {
   text-align: center;
   padding: 20px;
