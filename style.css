@@ -305,8 +305,10 @@ footer {
   text-align: center;
 }
 
+/* Finance Page Images */
 .finance-image img {
-  max-width: 100%;
+  max-width: 260px;   /* shrink down from full-width */
+  width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -395,6 +397,9 @@ footer {
   height: auto;
 }
 @media (max-width: 600px) {
+  .finance-image img {
+    max-width: 200px;  /* shrink more on small screens */
+  }
   .finance-image-block img {
     max-width: 240px;  /* still larger than before on mobile */
   }
