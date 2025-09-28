@@ -307,7 +307,7 @@ footer {
 
 /* Finance Page Images */
 .finance-image img {
-  max-width: 260px;   /* shrink down from full-width */
+  max-width: 320px;   /* shrink down from full-width */
   width: 100%;
   height: auto;
   border-radius: 10px;
