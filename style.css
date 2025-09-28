@@ -302,11 +302,10 @@ footer {
 }
 
 .finance-image img {
-  max-width: 280px;   /* was full width, shrink it */
-  width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
-  /*box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* Stack on smaller screens */
@@ -383,7 +382,7 @@ footer {
 }
 
 .finance-image-block img {
-  max-width: 340px;
+  max-width: 260px;
   width: 100%;
   height: auto;
 }
