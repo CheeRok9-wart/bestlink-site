@@ -407,9 +407,19 @@ footer {
 }
 
 .finance-contact {
-  background-image: url("MTFTeam2.jpg");
+  background-image: url("images/MTFTeam2.jpg");
   background-size: cover;
   background-position: center;
+}
+/* White inner box for readability */
+.finance-box,
+.finance-contact .contact-box {
+  background: rgba(255,255,255,0.95);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .finance-details h2, .finance-contact h2 {
