@@ -130,24 +130,55 @@
   const pergolaBtn = document.querySelector(".product:nth-child(1) .btn");
   const closeBtn = document.querySelector(".modal .close");
 
+<script>
+  // Modal setup
+  const modals = {
+    pergola: document.getElementById("pergolaModal"),
+    carport: document.getElementById("carportModal"),
+    sunroom: document.getElementById("sunroomModal")
+  };
+
+  const buttons = {
+    pergola: document.querySelector(".product:nth-child(1) .btn"),
+    carport: document.querySelector(".product:nth-child(2) .btn"),
+    sunroom: document.querySelector(".product:nth-child(3) .btn")
+  };
+
+  const closeButtons = document.querySelectorAll(".modal .close");
+
   // Open modal
-  pergolaBtn.addEventListener("click", (e) => {
+  buttons.pergola.addEventListener("click", (e) => {
     e.preventDefault();
-    pergolaModal.style.display = "block";
+    modals.pergola.style.display = "block";
   });
 
-  // Close modal
-  closeBtn.addEventListener("click", () => {
-    pergolaModal.style.display = "none";
+  buttons.carport.addEventListener("click", (e) => {
+    e.preventDefault();
+    modals.carport.style.display = "block";
   });
 
-  // Close when clicking outside modal
+  buttons.sunroom.addEventListener("click", (e) => {
+    e.preventDefault();
+    modals.sunroom.style.display = "block";
+  });
+
+  // Close modal when clicking X
+  closeButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.closest(".modal").style.display = "none";
+    });
+  });
+
+  // Close modal when clicking outside
   window.addEventListener("click", (e) => {
-    if (e.target === pergolaModal) {
-      pergolaModal.style.display = "none";
-    }
+    Object.values(modals).forEach((modal) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
   });
 </script>
+
 
 </body>
 </html>
